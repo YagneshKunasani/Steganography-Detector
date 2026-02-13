@@ -1,0 +1,10 @@
+venv/
+__pycache__/
+
+raw_images/
+dataset/
+*.jpg
+*.png
+
+.DS_store
+Thumbs.db
