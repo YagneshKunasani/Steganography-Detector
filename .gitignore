@@ -1,10 +1,15 @@
 venv/
 __pycache__/
+*.pyc
 
 raw_images/
 dataset/
 *.jpg
 *.png
+*.jpeg
+
+.pth
+.pt
 
 .DS_store
 Thumbs.db
