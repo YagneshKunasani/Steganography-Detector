@@ -30,13 +30,22 @@ The repository is structured as a complete Software Engineering pipeline:
 git clone [https://github.com/YagneshKunasani/Steganography-Detector.git](https://github.com/YagneshKunasani/Steganography-Detector.git)
 cd Steganography-Detector
 pip install -r requirements.txt
+```
 
 **2. Generating the Dataset**
-Run python data_generator.py in the terminal
+Place a few random images into a raw_images/ folder, then run:
+```bash
+python data_generator.py
+```
 
 **3. Train the model**
-Run python train.py in the terminal to the generate the stego_model.pth file
+Train the CNN on your newly generated data to create the stego_model.pth weight file:
+```bash
+python train.py
+```
 
 **4. Test AI in your browser**
-Run streamlit run app.py in the terminal to test the model in your browser.
-
+Start the Streamlit server to test the AI in your browser:
+```bash
+streamlit run app.py
+```
