@@ -11,5 +11,9 @@ dataset/
 .pth
 .pt
 
+verify.py 
+1_see_pixels.py
+2_bit_planes.py
+
 .DS_store
 Thumbs.db

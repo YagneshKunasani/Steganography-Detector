@@ -2,8 +2,8 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-img_original = cv2.imread('test_image.jpg', 1) 
-img_stego = cv2.imread('stego_image.png', 1)
+img_original = cv2.imread('clean_0.png', 1) 
+img_stego = cv2.imread('stego_0.png', 1)
 
 blue_original = img_original[:, :, 0]
 blue_stego = img_stego[:, :, 0]
