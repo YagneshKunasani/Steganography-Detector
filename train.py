@@ -5,7 +5,7 @@ from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
 import os
 
-# --- TUNED HYPERPARAMETERS FOR OVERFITTING ---
+
 DATA_DIR = 'dataset'
 BATCH_SIZE = 4        
 EPOCHS = 50           
@@ -21,7 +21,6 @@ class StegoNet(nn.Module):
         self.fc2 = nn.Linear(128, 2)
 
     def forward(self, x):
-        # The Forensic Extraction Layer
         x = torch.round(x * 255.0) % 2.0
         
         x = self.pool(torch.relu(self.conv1(x)))
@@ -64,7 +63,6 @@ if __name__ == "__main__":
         accuracy = 100 * correct / total
         print(f"Epoch [{epoch+1}/{EPOCHS}] - Loss: {running_loss/len(train_loader):.4f} - Accuracy: {accuracy:.2f}%")
 
-    # --- THE MISSING SAVE BLOCK ---
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
     save_path = os.path.join(BASE_DIR, 'stego_model.pth')
     
